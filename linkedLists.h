@@ -71,13 +71,13 @@ class llist {
         head-> next = NULL;
     }
 };
-    template<typename T>
-    ostream& operator<<(ostream& out, const llist<T> list ){
-            list.display();
-        }
-    template<typename T>
-    istream& operator>>(istream& in, const llist<T> list){
-            list.insert(in);
+template<typename T>
+ostream& operator<<(ostream& out, const llist<T>& list ){
+        list.display();
     }
+template<typename T>
+istream& operator>>(istream& in, const llist<T>& list){
+        list.insert(in);
+}
 
 #endif
