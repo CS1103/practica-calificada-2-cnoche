@@ -3,6 +3,9 @@
 
 using namespace std;
 
+#ifndef LINKEDLISTS_H
+#define LINKEDLISTS_H
+
 template<typename T>  
 struct node
   {
@@ -32,8 +35,8 @@ class llist {
             head=temp;
     }
     template<typename... Args>
-    void insert(Args... items){
-        insert(Args... items);
+    void insert(T item, Args... args){
+        insert(item, args...);
     }
 
     T get_max(){
@@ -63,10 +66,9 @@ class llist {
         }
     }
     void clear(){
-
-    }
-    void size(){
-
+        node<T> *temp=new node<T>;
+        temp = head;    
+        head-> next = NULL;
     }
 };
     template<typename T>
@@ -78,3 +80,4 @@ class llist {
             list.insert(in);
     }
 
+#endif
