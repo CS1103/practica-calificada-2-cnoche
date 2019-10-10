@@ -1,13 +1,16 @@
 #include <iostream>
 
-#include "heap.h"
+#include "linkedLists.h"
+#include "read.h"
+
 using namespace std;
 
 int main()
 {
-    heap<int> h;
+ 
+    llist<int> h;
     load_from("data.txt", h);
-    cout << "heap" << endl;
+    cout << "Lista" << endl;
     cout << h;
     h.insert(10);
     h.insert(20);
@@ -21,7 +24,7 @@ int main()
     cin >> h;
     cout << "heap" << endl;
     cout << h;
-    insert(h, 100, 200);
+    h.insert(h, 100, 200);
     cout << "heap" << endl;
     cout << h;
     load_from("data.txt", h);
